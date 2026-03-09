@@ -24,5 +24,8 @@
     <ClCompile Include="Valid Parentheses.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Check If Two String Arrays are Equivalent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

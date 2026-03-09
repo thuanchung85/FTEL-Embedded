@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="FTEL Embedded 2026.cpp" />
     <ClCompile Include="Merge Sorted Array.cpp" />
     <ClCompile Include="Valid Parentheses.cpp" />

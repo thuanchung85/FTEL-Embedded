@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="FTEL Embedded 2026/FTEL Embedded 2026.vcxproj" />
+  <Project Path="FTEL Embedded 2026/FTEL Embedded 2026.vcxproj" Id="457b8ac9-1702-4345-87a1-59c5e42131e0" />
 </Solution>
