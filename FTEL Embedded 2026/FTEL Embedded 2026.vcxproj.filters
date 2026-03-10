@@ -27,5 +27,8 @@
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Kids With the Greatest Number of Candies.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

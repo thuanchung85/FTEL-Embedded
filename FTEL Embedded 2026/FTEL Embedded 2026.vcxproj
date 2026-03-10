@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="FTEL Embedded 2026.cpp" />
+    <ClCompile Include="Kids With the Greatest Number of Candies.cpp" />
     <ClCompile Include="Merge Sorted Array.cpp" />
     <ClCompile Include="Valid Parentheses.cpp" />
   </ItemGroup>
