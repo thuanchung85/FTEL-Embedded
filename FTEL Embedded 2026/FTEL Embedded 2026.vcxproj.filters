@@ -33,5 +33,8 @@
     <ClCompile Include="Robot Return to Origin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Find the Difference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
