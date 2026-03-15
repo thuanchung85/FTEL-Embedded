@@ -36,5 +36,8 @@
     <ClCompile Include="Find the Difference.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Maximum Average Subarray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
