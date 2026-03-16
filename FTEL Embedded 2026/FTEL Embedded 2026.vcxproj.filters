@@ -42,5 +42,8 @@
     <ClCompile Include="Ransom Note.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Longest Substring Without Repeating Characters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
