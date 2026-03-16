@@ -133,6 +133,7 @@
     <ClCompile Include="Kids With the Greatest Number of Candies.cpp" />
     <ClCompile Include="Maximum Average Subarray.cpp" />
     <ClCompile Include="Merge Sorted Array.cpp" />
+    <ClCompile Include="Ransom Note.cpp" />
     <ClCompile Include="Robot Return to Origin.cpp" />
     <ClCompile Include="Valid Parentheses.cpp" />
   </ItemGroup>
