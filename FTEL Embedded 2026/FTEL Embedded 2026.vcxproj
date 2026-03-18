@@ -130,6 +130,7 @@
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="Find the Difference.cpp" />
     <ClCompile Include="FTEL Embedded 2026.cpp" />
+    <ClCompile Include="Group Anagrams.cpp" />
     <ClCompile Include="Kids With the Greatest Number of Candies.cpp" />
     <ClCompile Include="Longest Substring Without Repeating Characters.cpp" />
     <ClCompile Include="Maximum Average Subarray.cpp" />
