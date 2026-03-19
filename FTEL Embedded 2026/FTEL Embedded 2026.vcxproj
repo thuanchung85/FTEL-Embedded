@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp" />
+    <ClCompile Include="Convert Sorted List to Binary Search Tree.cpp" />
     <ClCompile Include="Find the Difference.cpp" />
     <ClCompile Include="FTEL Embedded 2026.cpp" />
     <ClCompile Include="Group Anagrams.cpp" />
