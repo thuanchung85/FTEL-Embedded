@@ -13,40 +13,43 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Embedded Algorithm - Week 1">
+      <UniqueIdentifier>{9f2b0f4a-58a5-497e-ae0f-780e3f88b776}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FTEL Embedded 2026.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Merge Sorted Array.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Valid Parentheses.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Kids With the Greatest Number of Candies.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Robot Return to Origin.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
     <ClCompile Include="Find the Difference.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
-    <ClCompile Include="Maximum Average Subarray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Ransom Note.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Longest Substring Without Repeating Characters.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="FTEL Embedded 2026.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
     <ClCompile Include="Group Anagrams.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Kids With the Greatest Number of Candies.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Longest Substring Without Repeating Characters.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Maximum Average Subarray.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge Sorted Array.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Ransom Note.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot Return to Origin.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Valid Parentheses.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
