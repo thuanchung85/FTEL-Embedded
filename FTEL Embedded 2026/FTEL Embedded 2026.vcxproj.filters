@@ -57,5 +57,8 @@
     <ClCompile Include="Convert Sorted List to Binary Search Tree.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
     </ClCompile>
+    <ClCompile Include="Implement Stack using Queues.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
