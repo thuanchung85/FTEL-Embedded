@@ -60,5 +60,8 @@
     <ClCompile Include="Implement Stack using Queues.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
     </ClCompile>
+    <ClCompile Include="Implement Queue using Stacks.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
