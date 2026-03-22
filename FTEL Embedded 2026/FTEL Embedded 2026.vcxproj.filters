@@ -72,5 +72,8 @@
     <ClCompile Include="Remove Linked List Elements.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
     </ClCompile>
+    <ClCompile Include="Array Partition.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
