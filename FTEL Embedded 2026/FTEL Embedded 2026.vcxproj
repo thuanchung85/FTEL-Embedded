@@ -144,6 +144,7 @@
     <ClCompile Include="Ransom Note.cpp" />
     <ClCompile Include="Remove Linked List Elements.cpp" />
     <ClCompile Include="Robot Return to Origin.cpp" />
+    <ClCompile Include="Squares of a Sorted Array.cpp" />
     <ClCompile Include="Valid Parentheses.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
