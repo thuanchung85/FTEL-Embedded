@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Array Partition.cpp" />
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp" />
+    <ClCompile Include="Contains Duplicate.cpp" />
     <ClCompile Include="Convert Sorted List to Binary Search Tree.cpp" />
     <ClCompile Include="Daily Temperatures.cpp" />
     <ClCompile Include="Find the Difference.cpp" />
