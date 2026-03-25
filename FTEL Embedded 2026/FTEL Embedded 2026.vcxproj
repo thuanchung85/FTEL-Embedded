@@ -138,6 +138,7 @@
     <ClCompile Include="Implement Queue using Stacks.cpp" />
     <ClCompile Include="Implement Stack using Queues.cpp" />
     <ClCompile Include="Kids With the Greatest Number of Candies.cpp" />
+    <ClCompile Include="Largest Number.cpp" />
     <ClCompile Include="Longest Substring Without Repeating Characters.cpp" />
     <ClCompile Include="Make The String Great.cpp" />
     <ClCompile Include="Maximum Average Subarray.cpp" />
