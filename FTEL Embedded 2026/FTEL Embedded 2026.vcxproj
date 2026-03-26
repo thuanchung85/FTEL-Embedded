@@ -144,6 +144,7 @@
     <ClCompile Include="Maximum Average Subarray.cpp" />
     <ClCompile Include="Merge Sorted Array.cpp" />
     <ClCompile Include="Missing Number.cpp" />
+    <ClCompile Include="Partition List.cpp" />
     <ClCompile Include="Ransom Note.cpp" />
     <ClCompile Include="Remove Linked List Elements.cpp" />
     <ClCompile Include="Robot Return to Origin.cpp" />
