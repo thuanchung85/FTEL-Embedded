@@ -96,5 +96,8 @@
     <ClCompile Include="Partition List.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
     </ClCompile>
+    <ClCompile Include="Delete Node in a Linked List.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
