@@ -122,6 +122,13 @@ public:
     //hàm in ra queue
     void printQueue()
     {
+        /*
+       Khi in ra Circular Queue thì front và count mới là hai thông tin quan trọng nhất:
+       front cho biết bắt đầu từ đâu để đọc dữ liệu.
+       count cho biết có bao nhiêu phần tử cần in.
+       Sau đó ta chỉ việc duyệt từ front qua count phần tử, mỗi bước cộng thêm 1 rồi lấy % size để vòng lại khi cần.
+       Còn rear thì chủ yếu dùng để biết vị trí kế tiếp sẽ được ghi khi enQueue. Nó không cần thiết cho việc in ra, vì thứ tự in luôn bắt đầu từ front và đi theo số lượng count.
+       */
         if (count == 0) {
             cout << "Queue is empty\n";
             return;
