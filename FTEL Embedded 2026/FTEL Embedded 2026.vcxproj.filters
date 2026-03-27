@@ -105,5 +105,8 @@
     <ClCompile Include="Remove All Adjacent Duplicates in String II.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
     </ClCompile>
+    <ClCompile Include="Design Circular Queue.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
