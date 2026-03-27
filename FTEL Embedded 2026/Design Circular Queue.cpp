@@ -128,6 +128,26 @@ public:
        count cho biết có bao nhiêu phần tử cần in.
        Sau đó ta chỉ việc duyệt từ front qua count phần tử, mỗi bước cộng thêm 1 rồi lấy % size để vòng lại khi cần.
        Còn rear thì chủ yếu dùng để biết vị trí kế tiếp sẽ được ghi khi enQueue. Nó không cần thiết cho việc in ra, vì thứ tự in luôn bắt đầu từ front và đi theo số lượng count.
+
+        Ví dụ minh họa
+        Queue size = 5, trạng thái:  Mảng: [5, 7, 10, 20, 30]
+
+        front = 2, count = 5
+
+
+        Hàm in sẽ chạy:
+
+        (2+0)%5 = 2 → 10
+
+        (2+1)%5 = 3 → 20
+
+        (2+2)%5 = 4 → 30
+
+        (2+3)%5 = 0 → 5
+
+        (2+4)%5 = 1 → 7
+
+        Kết quả: 10 20 30 5 7 → đúng FIFO.
        */
         if (count == 0) {
             cout << "Queue is empty\n";
