@@ -1,3 +1,18 @@
+/*
+Queue thường (size = 5):
+
+Thêm: [1, 2, 3, 4, 5] → đầy.
+Xóa 2 phần tử: [_, _, 3, 4, 5].
+Muốn thêm nữa? Không được, vì rear đã ở cuối mảng → lãng phí 2 ô trống.
+
+
+Circular Queue (size = 5):
+
+Thêm: [1, 2, 3, 4, 5] → đầy.
+Xóa 2 phần tử: [_, _, 3, 4, 5].
+Thêm tiếp: [6, 7, 3, 4, 5] → tận dụng lại 2 ô trống phía trước.
+*/
+
 class MyCircularQueue {
 private:
     int* queue;
