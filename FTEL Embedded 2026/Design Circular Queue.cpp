@@ -13,6 +13,9 @@ Xóa 2 phần tử: [_, _, 3, 4, 5].
 Thêm tiếp: [6, 7, 3, 4, 5] → tận dụng lại 2 ô trống phía trước.
 */
 
+#include <iostream>
+using namespace std;
+
 class MyCircularQueue {
 private:
     int* queue;
@@ -114,6 +117,21 @@ public:
     //hàm trả ra Queue đã đầy hay chưa
     bool isFull() {
         return count == size;
+    }
+
+    //hàm in ra queue
+    void printQueue()
+    {
+        if (count == 0) {
+            cout << "Queue is empty\n";
+            return;
+        }
+        cout << "CircularQueue: ";
+        for (int i = 0; i < count; i++) {
+            int idx = (front + i) % size;
+            cout << queue[idx] << " ";
+        }
+        cout << endl;
     }
 };
 
