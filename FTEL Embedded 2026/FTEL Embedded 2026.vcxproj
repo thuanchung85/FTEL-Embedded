@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Array Partition.cpp" />
     <ClCompile Include="Asteroid Collision.cpp" />
+    <ClCompile Include="Binary Search.cpp" />
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp" />
     <ClCompile Include="Contains Duplicate.cpp" />
     <ClCompile Include="Convert Sorted List to Binary Search Tree.cpp" />

@@ -120,5 +120,8 @@
     <ClCompile Include="Sqrt_x.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
     </ClCompile>
+    <ClCompile Include="Binary Search.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
