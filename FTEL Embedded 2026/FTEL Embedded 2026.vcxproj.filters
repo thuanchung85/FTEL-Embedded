@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Embedded Algorithm - Week 2&amp;3">
       <UniqueIdentifier>{2f456804-05d2-4938-ac0b-49a73e6e7462}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Embedded Algorithm - Week 4">
+      <UniqueIdentifier>{ab65b03a-fc22-4153-8e0e-73722944c069}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp">
@@ -113,6 +116,9 @@
     </ClCompile>
     <ClCompile Include="Asteroid Collision.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 2&amp;3</Filter>
+    </ClCompile>
+    <ClCompile Include="Sqrt_x.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

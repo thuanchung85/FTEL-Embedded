@@ -155,6 +155,7 @@
     <ClCompile Include="Remove Nth Node From End of List.cpp" />
     <ClCompile Include="Robot Return to Origin.cpp" />
     <ClCompile Include="Sort Colors.cpp" />
+    <ClCompile Include="Sqrt_x.cpp" />
     <ClCompile Include="Squares of a Sorted Array.cpp" />
     <ClCompile Include="Third Maximum Number.cpp" />
     <ClCompile Include="Valid Parentheses.cpp" />
