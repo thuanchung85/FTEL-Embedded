@@ -123,5 +123,8 @@
     <ClCompile Include="Binary Search.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
     </ClCompile>
+    <ClCompile Include="Check If N and Its Double Exist.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
