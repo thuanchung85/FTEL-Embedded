@@ -17,6 +17,7 @@ cmd_line_t cmd_table[] = {
     {0, 0, 0} // kết thúc bảng
 };
 
+//====MAIN====//
 int main(void) 
 {
     /*

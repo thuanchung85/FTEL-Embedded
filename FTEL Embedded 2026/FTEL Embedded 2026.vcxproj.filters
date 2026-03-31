@@ -33,9 +33,6 @@
     <ClCompile Include="Find the Difference.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
-    <ClCompile Include="FTEL Embedded 2026.c">
-      <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
-    </ClCompile>
     <ClCompile Include="Group Anagrams.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
@@ -134,6 +131,9 @@
     </ClCompile>
     <ClCompile Include="xprintf.c">
       <Filter>Source Files\Command Line</Filter>
+    </ClCompile>
+    <ClCompile Include="MAIN.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -140,7 +140,7 @@
     <ClCompile Include="Design Circular Queue.cpp" />
     <ClCompile Include="Evaluate Reverse Polish Notation.cpp" />
     <ClCompile Include="Find the Difference.cpp" />
-    <ClCompile Include="FTEL Embedded 2026.c" />
+    <ClCompile Include="MAIN.c" />
     <ClCompile Include="Group Anagrams.cpp" />
     <ClCompile Include="Implement Queue using Stacks.cpp" />
     <ClCompile Include="Implement Stack using Queues.cpp" />
