@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Embedded Algorithm - Week 4">
       <UniqueIdentifier>{ab65b03a-fc22-4153-8e0e-73722944c069}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Command Line">
+      <UniqueIdentifier>{34b28cd3-f3da-4d15-9ad1-37be1ef3ff29}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Check If Two String Arrays are Equivalent.cpp">
@@ -30,7 +33,7 @@
     <ClCompile Include="Find the Difference.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
-    <ClCompile Include="FTEL Embedded 2026.cpp">
+    <ClCompile Include="FTEL Embedded 2026.c">
       <Filter>Source Files\Embedded Algorithm - Week 1</Filter>
     </ClCompile>
     <ClCompile Include="Group Anagrams.cpp">
@@ -126,5 +129,19 @@
     <ClCompile Include="Check If N and Its Double Exist.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
     </ClCompile>
+    <ClCompile Include="cmd_line.c">
+      <Filter>Source Files\Command Line</Filter>
+    </ClCompile>
+    <ClCompile Include="xprintf.c">
+      <Filter>Source Files\Command Line</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cmd_line.h">
+      <Filter>Source Files\Command Line</Filter>
+    </ClInclude>
+    <ClInclude Include="xprintf.h">
+      <Filter>Source Files\Command Line</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
