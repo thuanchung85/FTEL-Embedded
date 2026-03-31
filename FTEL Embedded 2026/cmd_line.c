@@ -36,6 +36,7 @@ uint8_t cmd_line_parser(cmd_line_t* cmd_table, uint8_t* command)
 	}
 
 	/* get cmd */
+	//Bước 1: tách phần tên lệnh ra khỏi chuỗi lệnh người dùng nhập vào. Vòng while sẽ chạy cho đến khi gặp khoảng trắng, ký tự xuống dòng hoặc kết thúc chuỗi.
 	//while (*p_command) nghĩa là lặp cho đến khi ký tự mà con trỏ p_command đang trỏ tới bằng 0 (null terminator '\0' của chuỗi C). → Nói cách khác, vòng lặp sẽ dừng khi đến cuối chuỗi lệnh.
 	while (*p_command) 
 	{
@@ -82,6 +83,7 @@ uint8_t cmd_line_parser(cmd_line_t* cmd_table, uint8_t* command)
 	}
 
 	/* find respective command in command table */
+	//Bước 2: chạy while tìm kiêm cmd trong cmd_table. Mỗi lần lặp, nó sẽ so sánh cmd với trường cmd của mục hiện tại trong cmd_table. Nếu tìm thấy, nó sẽ gọi hàm xử lý tương ứng và trả về CMD_SUCCESS. Nếu không tìm thấy sau khi duyệt hết bảng, nó sẽ trả về CMD_NOT_FOUND.
 	while (cmd_table[index_check].cmd) // nghĩa là lặp cho đến khi gặp mục trong cmd_table mà trường cmd bằng NULL (điều này đánh dấu kết thúc bảng lệnh).
 	{
 
