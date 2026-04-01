@@ -147,6 +147,7 @@
     <ClCompile Include="Kids With the Greatest Number of Candies.cpp" />
     <ClCompile Include="Largest Number.cpp" />
     <ClCompile Include="Longest Substring Without Repeating Characters.cpp" />
+    <ClCompile Include="Majority Element.cpp" />
     <ClCompile Include="Make The String Great.cpp" />
     <ClCompile Include="Maximum Average Subarray.cpp" />
     <ClCompile Include="Merge Sorted Array.cpp" />

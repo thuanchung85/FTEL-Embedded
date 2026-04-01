@@ -135,6 +135,9 @@
     <ClCompile Include="MAIN.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Majority Element.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmd_line.h">
