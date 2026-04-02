@@ -163,6 +163,7 @@
     <ClCompile Include="Squares of a Sorted Array.cpp" />
     <ClCompile Include="Third Maximum Number.cpp" />
     <ClCompile Include="Valid Parentheses.cpp" />
+    <ClCompile Include="Valid Perfect Square.cpp" />
     <ClCompile Include="xprintf.c" />
   </ItemGroup>
   <ItemGroup>

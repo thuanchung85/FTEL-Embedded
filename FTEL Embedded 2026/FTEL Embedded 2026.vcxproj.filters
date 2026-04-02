@@ -138,6 +138,9 @@
     <ClCompile Include="Majority Element.cpp">
       <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
     </ClCompile>
+    <ClCompile Include="Valid Perfect Square.cpp">
+      <Filter>Source Files\Embedded Algorithm - Week 4</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmd_line.h">
