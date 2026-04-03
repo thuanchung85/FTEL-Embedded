@@ -139,6 +139,7 @@
     <ClCompile Include="Delete Node in a Linked List.cpp" />
     <ClCompile Include="Design Circular Queue.cpp" />
     <ClCompile Include="Evaluate Reverse Polish Notation.cpp" />
+    <ClCompile Include="Find First and Last Position of Element in Sorted Array.cpp" />
     <ClCompile Include="Find the Difference.cpp" />
     <ClCompile Include="MAIN.c" />
     <ClCompile Include="Group Anagrams.cpp" />
