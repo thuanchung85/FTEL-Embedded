@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
-#include "cmd_line.h"
-#include "xprintf.h"
+#include "Cmd_Line/cmd_line.h"
+#include "Cmd_Line/xprintf.h"
 #include <assert.h>
 
 // Hàm xử lý mẫu
