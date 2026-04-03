@@ -39,8 +39,10 @@ public:
         // Ghép lại chuỗi từ stack
         string result;
         while (!st.empty()) {
-            auto [ch, cnt] = st.top();
+            auto pr = st.top();  // pr is pair<char,int>
             st.pop();
+            char ch = pr.first;
+            int cnt = pr.second;
             result.append(cnt, ch);
         }
 
