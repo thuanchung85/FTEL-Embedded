@@ -49,38 +49,46 @@ public:
             dp[2][0] = 0 , dp[2][1] = 0 , dp[2][2] = 0
             dp[3][0] = 0 , dp[3][1] = 0 , dp[3][2] = 0
             dp[4][0] = 0 , dp[4][1] = 0 , dp[4][2] = 0
+
+            dp là tổng lớn nhất khi xét đến lát thứ i (tính từ start) và chọn đúng j lát.
         */
 
 
-        dp[0][1] = slices[start]; // chọn lát đầu tiên, nếu slices =[1,2,3,4,5] =>  dp[0][1] = 1.... nếu slices =[2,3,4,5,6] =>  dp[0][1] = 2. 
-
-		for (int i = 1; i < m; i++) //for này chạy i = 1 -> 4, duyệt theo hàng của ma trận, tức là số lượng lát pizza đã xét đến (từ 1 đến m-1). m = 5 suy ra bạn đã xét đến lát pizza thứ 4, tức là đã xét hết đoạn con.
+        dp[0][1] = slices[start]; // chọn lát pizza đầu tiên, nếu slices =[1,2,3,4,5] =>  dp[0][1] = 1.... nếu slices =[2,3,4,5,6] =>  dp[0][1] = 2. 
+        cout << "=======DEBUG======" << "\n";
+        cout << "DP lúc khởi đầu bóc lát pizza đầu tiên = " << dp[0][1] << "\n";
+        cout << "-----" << "\n";
+        for (int i = 1; i < m; i++) //for này chạy i = 1 -> 4, duyệt theo hàng của ma trận, tức là số lượng lát pizza đã xét đến (từ 1 đến m-1). m = 5 suy ra bạn đã xét đến lát pizza thứ 4, tức là đã xét hết đoạn con.
         {
-			for (int j = 1; j <= n; j++) //for này chạy j = 1 -> 2, duyệt theo cột của ma trận, tức là số lượng lát pizza đã chọn (từ 1 đến n). n = 2 suy ra bạn đã chọn được 2 lát pizza.
+            for (int j = 1; j <= n; j++) //for này chạy j = 1 -> 2, duyệt theo cột của ma trận, tức là số lượng lát pizza đã chọn (từ 1 đến n). n = 2 suy ra bạn đã chọn được 2 lát pizza.
             {
 
-				int a = dp[i - 1][j]; // trường hợp a: không chọn lát pizza thứ i, thì tổng lớn nhất vẫn là dp[i-1][j], tức là tổng lớn nhất khi đã xét đến lát pizza thứ i-1 và vẫn chọn j lát pizza.
+                int a = dp[i - 1][j]; // trường hợp a: không chọn lát pizza thứ i, thì tổng lớn nhất vẫn là dp[i-1][j], tức là tổng lớn nhất khi đã xét đến lát pizza thứ i-1 và vẫn chọn j lát pizza.
 
-				int b = (i >= 2 ? dp[i - 2][j - 1] : 0) + slices[start + i];// trường hợp b: chọn lát pizza thứ i, thì ta phải cộng giá trị của lát pizza thứ i (slices[start + i]) vào tổng lớn nhất khi đã xét đến lát pizza thứ i-2 và đã chọn j-1 lát pizza (dp[i-2][j-1]). Lý do là vì nếu chọn lát i thì không được chọn lát i-1 (vì kề nhau), nên ta phải xem xét tổng lớn nhất tại dp[i-2][j-1].
+                int b = (i >= 2 ? dp[i - 2][j - 1] : 0) + slices[start + i]; // trường hợp b: chọn lát pizza thứ i, thì ta phải cộng giá trị của lát pizza thứ i (slices[start + i]) vào tổng lớn nhất khi đã xét đến lát pizza thứ i-2 và đã chọn j-1 lát pizza (dp[i-2][j-1]). Lý do là vì nếu chọn lát i thì không được chọn lát i-1 (vì kề nhau), nên ta phải xem xét tổng lớn nhất tại dp[i-2][j-1].
 
-				dp[i][j] = max(a, b);// dp[i][j] sẽ là giá trị lớn nhất giữa hai trường hợp trên: không chọn lát i (a) hoặc chọn lát i (b).
+                dp[i][j] = max(a, b); // dp[i][j] sẽ là giá trị lớn nhất giữa hai trường hợp trên: không chọn lát i (a) hoặc chọn lát i (b).
 
                 // In ra debug chi tiết
-                cout << "i=" << i << ", j=" << j
-                    << " | xet miếng pizza =" << slices[start + i]
+                cout << "Nếu ta bóc miếng pizza " << i << " có giá trị = " << slices[start + i] << ",  lần bóc " << j << " lát pizza "
+
                     << " | a=" << a
                     << " | b=" << b
-                    << " | so max(" << a << "," << b << ") dp[" << i << "][" << j << "]=" << dp[i][j] << "\n";
+                    << " | so max(" << a << "," << b << ") dp lúc này DP[" << i << "][" << j << "]=" << dp[i][j] << "\n";
+
+
             }
+            cout << "-----" << "\n";
         }
 
         // In ra bảng DP để debug
         cout << "\nDP table (m=" << m << ", n=" << n << "):\n";
+        cout << "bóc 0 lát  | " << "bóc 1 lát  | " << "bóc 2 lát \n";
         for (int i = 0; i < m; i++)
         {
             for (int j = 0; j <= n; j++)
             {
-                cout << setw(4) << dp[i][j] << " ";
+                cout << setw(4) << dp[i][j] << "         ";
             }
             cout << "\n";
         }
