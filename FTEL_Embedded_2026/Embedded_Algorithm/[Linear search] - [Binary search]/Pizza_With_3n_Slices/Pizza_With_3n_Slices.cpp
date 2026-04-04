@@ -54,16 +54,16 @@ public:
 
         dp[0][1] = slices[start]; // chọn lát đầu tiên, nếu slices =[1,2,3,4,5] =>  dp[0][1] = 1.... nếu slices =[2,3,4,5,6] =>  dp[0][1] = 2. 
 
-        for (int i = 1; i < m; i++) //dòng for chạy theo m từ 1 -> 4, duyệt theo hàng của ma trận, tức là xét lần lượt từng lát pizza từ vị trí start+1 đến end. Mỗi i tương ứng với một lát pizza.
+		for (int i = 1; i < m; i++) //for này chạy i = 1 -> 4, duyệt theo hàng của ma trận, tức là số lượng lát pizza đã xét đến (từ 1 đến m-1). m = 5 suy ra bạn đã xét đến lát pizza thứ 4, tức là đã xét hết đoạn con.
         {
-            for (int j = 1; j <= n; j++) //for này chạy j = 1 -> 2, duyệt theo cột của ma trận, tức là số lượng lát pizza bạn được chọn (từ 1 đến n).  n = 2 suy ra bạn được chọn 2 miếng pizza , tưc 2 lần for cho j
+			for (int j = 1; j <= n; j++) //for này chạy j = 1 -> 2, duyệt theo cột của ma trận, tức là số lượng lát pizza đã chọn (từ 1 đến n). n = 2 suy ra bạn đã chọn được 2 lát pizza.
             {
 
-                int a = dp[i - 1][j]; // không chọn lát i
+				int a = dp[i - 1][j]; // trường hợp a: không chọn lát pizza thứ i, thì tổng lớn nhất vẫn là dp[i-1][j], tức là tổng lớn nhất khi đã xét đến lát pizza thứ i-1 và vẫn chọn j lát pizza.
 
-                int b = (i >= 2 ? dp[i - 2][j - 1] : 0) + slices[start + i]; // chọn lát i. dòng code slices[start + i] là rất quan trọng, nó gắn giá trị pizza vào cho matrix. chính là nơi gắn giá trị lát pizza thực tế vào công thức DP. Nếu không có nó thì ma trận dp chỉ toàn số 0 hoặc số cũ, không phản ánh được “độ ngon” của từng lát pizza. thì phần slices[start+i] chính là “thêm lát pizza hiện tại” vào tổng. Nhờ vậy, mỗi ô dp[i][j] không chỉ lưu số lượng lát đã chọn, mà còn lưu tổng giá trị tối ưu khi có thêm lát đó.
+				int b = (i >= 2 ? dp[i - 2][j - 1] : 0) + slices[start + i];// trường hợp b: chọn lát pizza thứ i, thì ta phải cộng giá trị của lát pizza thứ i (slices[start + i]) vào tổng lớn nhất khi đã xét đến lát pizza thứ i-2 và đã chọn j-1 lát pizza (dp[i-2][j-1]). Lý do là vì nếu chọn lát i thì không được chọn lát i-1 (vì kề nhau), nên ta phải xem xét tổng lớn nhất tại dp[i-2][j-1].
 
-                dp[i][j] = max(a, b);
+				dp[i][j] = max(a, b);// dp[i][j] sẽ là giá trị lớn nhất giữa hai trường hợp trên: không chọn lát i (a) hoặc chọn lát i (b).
 
                 // In ra debug chi tiết
                 cout << "i=" << i << ", j=" << j
