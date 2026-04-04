@@ -60,21 +60,32 @@ public:
         cout << "-----" << "\n";
         for (int i = 1; i < m; i++) //for này chạy i = 1 -> 4, duyệt theo hàng của ma trận, tức là số lượng lát pizza đã xét đến (từ 1 đến m-1). m = 5 suy ra bạn đã xét đến lát pizza thứ 4, tức là đã xét hết đoạn con.
         {
+            cout << "Nếu ta bóc miếng pizza i = " << i << " có giá trị = " << slices[start + i] << "\n";
+
             for (int j = 1; j <= n; j++) //for này chạy j = 1 -> 2, duyệt theo cột của ma trận, tức là số lượng lát pizza đã chọn (từ 1 đến n). n = 2 suy ra bạn đã chọn được 2 lát pizza.
             {
 
-                int a = dp[i - 1][j]; // trường hợp a: không chọn lát pizza thứ i, thì tổng lớn nhất vẫn là dp[i-1][j], tức là tổng lớn nhất khi đã xét đến lát pizza thứ i-1 và vẫn chọn j lát pizza.
+                int DP_if_dont_eat_this_Pizza = dp[i - 1][j]; // trường hợp a: không chọn ăn lát pizza thứ i tức là không cộng thêm vào a giá trị slices[start + i], thì tổng lớn nhất vẫn là dp[i-1][j], tức là tổng lớn nhất khi đã xét đến lát pizza thứ i-1 và vẫn chọn j lát pizza.
 
-                int b = (i >= 2 ? dp[i - 2][j - 1] : 0) + slices[start + i]; // trường hợp b: chọn lát pizza thứ i, thì ta phải cộng giá trị của lát pizza thứ i (slices[start + i]) vào tổng lớn nhất khi đã xét đến lát pizza thứ i-2 và đã chọn j-1 lát pizza (dp[i-2][j-1]). Lý do là vì nếu chọn lát i thì không được chọn lát i-1 (vì kề nhau), nên ta phải xem xét tổng lớn nhất tại dp[i-2][j-1].
+                //i phải từ 2 trở lên mới kích hoạt case b đi tìm dp[i - 2][j - 1] để cộng thêm vào  slices[start + i]
+                int DP_if_eat_this_Pizza = (i >= 2 ? dp[i - 2][j - 1] : 0) + slices[start + i]; // trường hợp b: chọn ăn lát pizza thứ i, thì ta phải cộng giá trị của lát pizza thứ i (slices[start + i]) vào tổng lớn nhất khi đã xét đến lát pizza thứ i-2 và đã chọn j-1 lát pizza (dp[i-2][j-1]). Lý do là vì nếu chọn lát i thì không được chọn lát i-1 (vì kề nhau), nên ta phải xem xét tổng lớn nhất tại dp[i-2][j-1].
 
-                dp[i][j] = max(a, b); // dp[i][j] sẽ là giá trị lớn nhất giữa hai trường hợp trên: không chọn lát i (a) hoặc chọn lát i (b).
+                dp[i][j] = max(DP_if_dont_eat_this_Pizza, DP_if_eat_this_Pizza); // dp[i][j] sẽ là giá trị lớn nhất giữa hai trường hợp trên: không chọn lát i (a) hoặc chọn lát i (b).
 
                 // In ra debug chi tiết
-                cout << "Nếu ta bóc miếng pizza " << i << " có giá trị = " << slices[start + i] << ",  lần bóc " << j << " lát pizza "
+                if (i >= 2) {
+                    cout << "  lần được bóc " << j << " lát pizza "
+                        << " | trường hợp không ăn lát pizza= dp[" << i - 1 << "," << j << "] = " << DP_if_dont_eat_this_Pizza
+                        << " | trường hợp ăn lát pizza= dp[" << i - 2 << "," << j - 1 << "] = " << dp[i - 2][j - 1] << " + " << slices[start + i] << " = " << DP_if_eat_this_Pizza
+                        << " | so max(" << DP_if_dont_eat_this_Pizza << "," << DP_if_eat_this_Pizza << ") dp lúc này DP[" << i << "][" << j << "]=" << dp[i][j] << "\n";
+                }
+                else {
+                    cout << "  lần được bóc " << j << " lát pizza "
+                        << " | trường hợp không ăn lát pizza= dp[" << i - 1 << "," << j << "] = " << DP_if_dont_eat_this_Pizza
+                        << " | trường hợp ăn lát pizza =  " << DP_if_eat_this_Pizza
+                        << " | so max(" << DP_if_dont_eat_this_Pizza << "," << DP_if_eat_this_Pizza << ") dp lúc này DP[" << i << "][" << j << "]=" << dp[i][j] << "\n";
+                }
 
-                    << " | a=" << a
-                    << " | b=" << b
-                    << " | so max(" << a << "," << b << ") dp lúc này DP[" << i << "][" << j << "]=" << dp[i][j] << "\n";
 
 
             }
@@ -121,6 +132,31 @@ public:
             => thì lúc đó có nguy cơ chọn cả lát đầu và lát cuối. Mà vì pizza là vòng tròn, hai lát này cũng kề nhau, nên sẽ vi phạm quy tắc “không chọn hai lát liền kề”.
 
             nên xuất hiện 2 trường hợp dưới
+
+
+            ví dụ code thế này
+
+
+                int case1 = maxSum(slices, 0, slices.size() - 1, n);
+                return case1;
+
+                thì kết quả sẽ không còn đúng trong mọi trường hợp.
+                Lý do là vì khi bạn xét từ 0 đến slices.size()-1, tức là toàn bộ mảng, thì thuật toán DP coi mảng như tuyến tính.
+                Nó cho phép chọn cả phần tử đầu (slices[0]) và phần tử cuối (slices[slices.size()-1]) cùng lúc.
+                Nhưng vì pizza là vòng tròn, hai lát này kề nhau, nên việc chọn cả hai là vi phạm quy tắc.
+
+            Giả sử slices = [1,2,3,4,5,6], n = 2.
+
+            Nếu chạy maxSum(slices, 0, 5, 2) (toàn bộ mảng), DP có thể chọn lát 6 (cuối) và lát 1 (đầu), tổng = 7.
+
+            Nhưng trên vòng tròn, lát 1 và 6 kề nhau, nên không hợp lệ.
+
+            Trong khi đó, nếu chia làm 2 case:
+
+            Case 1: bỏ lát cuối → xét [1,2,3,4,5].
+
+            Case 2: bỏ lát đầu → xét [2,3,4,5,6].
+            → Kết quả đúng sẽ là max(case1, case2), không bao giờ chọn cả đầu và cuối cùng lúc.
         */
         int case1 = maxSum(slices, 0, slices.size() - 2, n); // trường hợp 1: ta bỏ lát cuối slices =[1,2,3,4,5]
 
