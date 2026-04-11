@@ -119,7 +119,7 @@ public:
                         if (dist[indexOf_near_x][indexOf_near_y] == -1) // → kiểm tra ô (indexOf_near_x, indexOf_near_y) chưa được thăm. Vì ban đầu ta gán tất cả bằng -1, sau đó khi BFS lan tới ô nào thì ta gán khoảng cách cho nó. Nếu dist[indexOf_near_x][indexOf_near_y] != -1 nghĩa là ô đó đã có khoảng cách rồi, không cần xử lý lại.
                         {
                             dist[indexOf_near_x][indexOf_near_y] = dist[x][y] + 1;
-                            queue_IndexOf_CheckMember.push({ indexOf_near_x,indexOf_near_y });
+                            queue_IndexOf_CheckMember.push({ indexOf_near_x,indexOf_near_y });// đem ô có điểm đã cộng thêm 1 vào queue_IndexOf_CheckMember, để dùng nó chạy while tiếp, điều này sẽ có lúc tạo ra ô có điểm = 2
                         }
                     }
                 }
